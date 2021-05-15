@@ -131,7 +131,8 @@ sum(1:100)
 
 sum=0
 for (i in 1:100){
-  final.sum<-sum+i
+  sum<-sum+i
 }
+sum
 ```
 
