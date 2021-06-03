@@ -4,10 +4,8 @@ output:
   html_document:
     toc: true
     toc_float: true
-    collapsed: false
-    number_sections: false
-    toc_depth: 1
-    #code_folding: hide
+    collapsed: true
+    smooth_scroll: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +55,8 @@ if (num%%2 != 0)
 #best attempt using mod
 
 ```
-# Problem 4
+
+## Problem 4
 
 List all of the prime numbers from 1 to 1000.
 
