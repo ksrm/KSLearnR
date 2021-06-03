@@ -14,7 +14,7 @@ output:
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 ```
 
-# Practice problems
+# Crump lab practice problems
 
 ## Problem 1
 
@@ -30,6 +30,21 @@ for (i in 1:100){
 }
 sum
 ```
+
+## Write a function to find the sum of all integers between any two values.
+```{r}
+value.sum<- function(x,y){
+  sum(x:y)
+}
+value.sum(1,100)
+```
+## List all of the odd numbers from 1 to 100.
+```{r}
+seq(1,100,2)
+
+
+```
+
 
 
 # Example problems
