@@ -24,27 +24,62 @@ Find the sum of all the integer numbers from 1 to 100.
 sum(1:100)
 
 
-sum=0
+sum<-0
 for (i in 1:100){
   sum<-sum+i
 }
-sum
 ```
 
-## Write a function to find the sum of all integers between any two values.
+
+## Problem 2
+
+Write a function to find the sum of all integers between any two values.
 ```{r}
 value.sum<- function(x,y){
   sum(x:y)
 }
 value.sum(1,100)
 ```
-## List all of the odd numbers from 1 to 100.
+
+
+## Problem 3
+
+List all of the odd numbers from 1 to 100.
 ```{r}
 seq(1,100,2)
 
+num<-0
+for (i in 1:100){
+  num<-num+i
+if (num%%2 != 0) 
+  print(num)
+}
+#best attempt using mod
 
 ```
+# Problem 4
 
+List all of the prime numbers from 1 to 1000.
+
+```{r}
+#developing algorithm based on sieve of Eratosthenes
+
+prime_numbers <- function(n){
+  if(n>=2){
+    
+  }
+}
+
+prime_numbers(1000)
+```
+
+# Generate 100 random numbers. 
+```{r}
+?runif
+#why runif over rnorm ?
+
+runif(100)
+```
 
 
 # Example problems
