@@ -72,7 +72,9 @@ prime_numbers <- function(n){
 prime_numbers(1000)
 ```
 
-# Generate 100 random numbers. 
+## Problem 5
+
+Generate 100 random numbers. 
 ```{r}
 ?runif
 #why runif over rnorm ?
