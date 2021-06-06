@@ -48,7 +48,7 @@ seq(1,100,2)
 
 num<-0
 for (i in 1:100){
-  num<-num+i
+  num<-num+1
 if (num%%2 != 0) 
   print(num)
 }
