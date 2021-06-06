@@ -52,7 +52,7 @@ for (i in 1:100){
 if (num%%2 != 0) 
   print(num)
 }
-#best attempt using mod
+#?corrected num+i --> num +1
 
 ```
 
