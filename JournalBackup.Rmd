@@ -1,4 +1,13 @@
 ---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+---
 title: "Learning R"
 output:
   html_document:
@@ -7,10 +16,6 @@ output:
     collapsed: true
     smooth_scroll: yes
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
-```
 
 # Crump lab practice problems
 
@@ -61,26 +66,14 @@ if (num%%2 != 0)
 List all of the prime numbers from 1 to 1000.
 
 ```{r}
+#developing algorithm based on sieve of Eratosthenes
 
 prime_numbers <- function(n){
-  if(n>=2){ 
-    x=seq(2,n)
-Prime=c()
-for(i in seq(2,n)){
-  if(any(x==i)){
-    Prime=c(Prime,i)
-    #creating object to store prime numbers
-    x=c(x[(x%%i) !=0])
-    #within vector x, if number in position does not divide evenly, print
+  if(n>=2){
+    
   }
 }
-return(Prime)}
-  else
-  {
-  stop()
-  }
-  #using nested functions
-}
+
 prime_numbers(1000)
 ```
 
@@ -99,23 +92,14 @@ runif(100)
 Write your own functions to give descriptive statistics for a vector variable storing multiple numbers. Write functions for the following without using R intrinsics: mean, mode, median, range, standard deviation
 
 ```{r}
-my_mean<-function(x){
-sum(x)/length(x)}
-my_mean(c(1,2,3))
+#mean<-function(){
+#obvs<- c()
+#mean<-sum(obvs)/length(obvs)}
+#mean()
 
-#my_median<-function(x){
-  #odd<-seq(1,x,2)
- # Median<-c()
-  #if odd
-  #[length/2)+1]}
-
-my_range<-function(x){
-  v<- c(x)
+(v<- c(1,10,5))
 v2<-sort(v)
-range<-c(v2[1], v2[length(v2)])
-print(range)}
-
-range(1,20,4,6,8,3)
+(range<-c(v2[1], v2[3]))
 ```
 
 
@@ -123,11 +107,7 @@ range(1,20,4,6,8,3)
 
 Count the number of characters in a string variable
 ```{r}
-string<-"Hello world"
-(String<-unlist(strsplit(string,split="")))
-length(String)
 
-#not possible to count elements in a list ?
 ```
 
 
@@ -136,33 +116,22 @@ length(String)
 Count the number of words in a string variable
 
 ```{r}
-x1<-c("Down by the corner")
-sapply(strsplit(x1," "), length)
+length("hello")
 ```
 
 
 ## 13
 
 Count the number of sentences in a string variable.
+
 ```{r}
-x<-("I go home. You stay here.")
-grep(".",x)
+string<-"Going to the mall."
+#how would you detect a capital letter and period ? 
 
-#Sentence<-function(x){
-#  strsplit(x, split=character(0))
-#  for(i in x)
-#    period<-c(".")
-#if (i==period){
-#  count<-0
-#  sentence<-count+1
-#  return(sentence)}
-#  else
-#  {
-#  stop()
-#  }
-#}
-#Sentence(I go home. You stay here.)
-
+counter<-0
+for(i)
+If ".", stop. 
+Counter(0)
 ```
 
 
@@ -170,10 +139,26 @@ grep(".",x)
 
 Count the number of times a specific character occurs in a string variable
 
+```{r}
+
+#character detection
+#while loop
+#counter lo
+
+#frequence of occurence of all the unique things in a character
+
+#table function ? 
+```
+
 
 ## 15
 
 Do a logical test to see if one word is found within the text of another string variable.
+
+```{r}
+
+```
+
 
 ## 16
 
@@ -241,7 +226,35 @@ d/e
 ```
 
 
+## Example 4
 
+Write code that will place the numbers 1 to 100 separately into a variable using for loop. Then, again using the seq function.
+
+```{r}
+# for loop solution
+# i becomes the number 1 to 100 at each step of the loop
+
+
+a <- length(100) # make empty variable, set length to 100
+for (i in 1:100){
+  a[i] <-i #assigns the number in i, to the ith index of a
+}
+
+print(a)
+
+# for loop solution #2
+
+a<-c() #create empty variable using combine command
+for (i in 1:100){
+  a<-c(a,i) # keeps combining a with itself and the new number in i
+}
+print(a)
+
+# seq solution
+a <- seq(1,100,1) # look up help for seq using ?seq() in console
+print(a)
+
+```
 
 
 
