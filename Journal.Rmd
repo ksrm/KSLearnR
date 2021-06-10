@@ -88,7 +88,6 @@ prime_numbers(1000)
 
 Generate 100 random numbers. 
 ```{r}
-?runif
 #why runif over rnorm ?
 
 runif(100)
@@ -144,26 +143,6 @@ sapply(strsplit(x1," "), length)
 ## 13
 
 Count the number of sentences in a string variable.
-```{r}
-x<-("I go home. You stay here.")
-grep(".",x)
-
-#Sentence<-function(x){
-#  strsplit(x, split=character(0))
-#  for(i in x)
-#    period<-c(".")
-#if (i==period){
-#  count<-0
-#  sentence<-count+1
-#  return(sentence)}
-#  else
-#  {
-#  stop()
-#  }
-#}
-#Sentence(I go home. You stay here.)
-
-```
 
 
 ## 14 
