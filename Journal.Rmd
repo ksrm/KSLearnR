@@ -122,10 +122,8 @@ return[position.odd]
 #print(median.position)
 }
 
-my_median(c(1,2,3,4,5))
-
-
-my_median(c(1,2,3,4))
+#my_median(c(1,2,3,4,5))
+#my_median(c(1,2,3,4))
 
 my_range<-function(x){
   v<- c(x)
