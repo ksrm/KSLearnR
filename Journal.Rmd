@@ -84,12 +84,12 @@ return(Prime)}
 prime_numbers(1000)
 ```
 
-## Problem 5
-
 Generate 100 random numbers. 
 ```{r}
-#why runif over rnorm ?
+runif(100)
+#pseudorandom numbers across a uniform distribution where all numbers are equally probable 
 
+set.seed(666)
 runif(100)
 ```
 
@@ -102,11 +102,30 @@ my_mean<-function(x){
 sum(x)/length(x)}
 my_mean(c(1,2,3))
 
-#my_median<-function(x){
-  #odd<-seq(1,x,2)
- # Median<-c()
+my_mean.2<- function(x){
+  total_sum<-0
+  for(i in x){
+    total_sum<-total_sum+i
+  }#using indexing
+  return(total_sum/length(x))
+}
+my_mean(c(1,2,3))
+
+
+my_median<-function(x){
   #if odd
-  #[length/2)+1]}
+position.odd<-(length(x)/2)
+return[position.odd]
+#if even
+#position.even<-((length(x)/2)+((length(x)/2)+1
+#return([position.even])
+#print(median.position)
+}
+
+my_median(c(1,2,3,4,5))
+
+
+my_median(c(1,2,3,4))
 
 my_range<-function(x){
   v<- c(x)
@@ -122,6 +141,10 @@ range(1,20,4,6,8,3)
 
 Count the number of characters in a string variable
 ```{r}
+nchar("Jamie Fox")
+celebrity01<-"Jamie Fox"
+nchar(celebrity01)
+
 string<-"Hello world"
 (String<-unlist(strsplit(string,split="")))
 length(String)
@@ -140,14 +163,26 @@ sapply(strsplit(x1," "), length)
 ```
 
 
+Create a variable that stores a 20x20 matrix of random numbers
+```{r}
+matrix(runif(400), nrow=20, ncol=20, byrow=TRUE)
+```
+
 ## 13
 
 Count the number of sentences in a string variable.
+
+```{r}
+
+```
 
 
 ## 14 
 
 Count the number of times a specific character occurs in a string variable
+```{r}
+"de la douleur, de l'ennui et de la mort"
+```
 
 
 ## 15
@@ -170,54 +205,11 @@ Read a .txt file or .csv file into a variable
 
 Output the contents of a variable to a .txt file
 
-## 20 
-
-Create a variable that stores a 20x20 matrix of random numbers
-
 ## 21
 
 Output any matrix to a txt file using commas or tabs to separate column values, and new lines to separate row values
-# Example problems
 
 
-So, let's say you are learning how to make a histogram in R. For example, maybe you want to sample 100 numbers from a normal distribution with mean = 0, and standard deviation =1, and then you want to plot a histogram. You can do this right here by using an r code block, like this:
-
-## Example 1
-
-```{r}
-samples <- rnorm(100, mean=0, sd=1)
-hist(samples)
-```
-
-
-## Example 2
-
-Do simple math with numbers, addition, subtraction, multiplication, division
-
-```{r}
-1+2
-2*5
-5/3
-(1+6+4)/5
-
-```
-
-## Example 3
-
-Put numbers into variables, do simple math on the variables
-
-```{r}
-a<-1
-b<-2
-a+b
-
-d<-c(1,2,3)
-e<-c(5,6,7)
-d+e
-d*e
-d/e
-
-```
 
 
 
