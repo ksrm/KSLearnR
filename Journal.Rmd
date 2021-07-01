@@ -4,7 +4,7 @@ output:
   html_document:
     toc: true
     toc_float: true
-    collapsed: true
+    collapsed: false
     smooth_scroll: yes
 ---
 
@@ -12,9 +12,14 @@ output:
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 ```
 
-# Crump lab practice problems
+Prep
+```{r}
+library("stringr")
+```
 
-## Problem 1
+
+# Practice problems 
+Sourced from Crump Lab at Brooklyn College
 
 Find the sum of all the integer numbers from 1 to 100.
 
@@ -29,8 +34,6 @@ for (i in 1:100){
 ```
 
 
-## Problem 2
-
 Write a function to find the sum of all integers between any two values.
 ```{r}
 value.sum<- function(x,y){
@@ -39,8 +42,6 @@ value.sum<- function(x,y){
 value.sum(1,100)
 ```
 
-
-## Problem 3
 
 List all of the odd numbers from 1 to 100.
 ```{r}
@@ -55,8 +56,6 @@ if (num%%2 != 0)
 #?corrected num+i --> num +1
 
 ```
-
-## Problem 4
 
 List all of the prime numbers from 1 to 1000.
 
@@ -92,8 +91,16 @@ runif(100)
 set.seed(666)
 runif(100)
 ```
+Count the number of characters in a string variable
 
-## 10
+```{r}
+#using stringr package 
+a<-"de la douleur, de l'ennui et de la mort"
+str_count(a, "e")
+
+str_count(a, "de")
+```
+
 
 Write your own functions to give descriptive statistics for a vector variable storing multiple numbers. Write functions for the following without using R intrinsics: mean, mode, median, range, standard deviation
 
@@ -135,9 +142,6 @@ range(1,20,4,6,8,3)
 ```
 
 
-## 11
-
-Count the number of characters in a string variable
 ```{r}
 nchar("Jamie Fox")
 celebrity01<-"Jamie Fox"
@@ -149,9 +153,6 @@ length(String)
 
 #not possible to count elements in a list ?
 ```
-
-
-## 12
 
 Count the number of words in a string variable
 
@@ -166,44 +167,23 @@ Create a variable that stores a 20x20 matrix of random numbers
 matrix(runif(400), nrow=20, ncol=20, byrow=TRUE)
 ```
 
-## 13
 
 Count the number of sentences in a string variable.
 
-```{r}
-
-```
-
-
-## 14 
-
-Count the number of times a specific character occurs in a string variable
-```{r}
-"de la douleur, de l'ennui et de la mort"
-```
-
-
-## 15
 
 Do a logical test to see if one word is found within the text of another string variable.
 
-## 16
 
 Put the current computer time in milliseconds into a variable
 
-## 17
-
 Measure how long a piece of code takes to run by measuring the time before the code is run, and after the code is run, and taking the difference to find the total time
 
-## 18
 
 Read a .txt file or .csv file into a variable
 
-## 19
 
 Output the contents of a variable to a .txt file
 
-## 21
 
 Output any matrix to a txt file using commas or tabs to separate column values, and new lines to separate row values
 
