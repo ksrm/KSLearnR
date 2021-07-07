@@ -166,10 +166,12 @@ Create a variable that stores a 20x20 matrix of random numbers
 ```{r}
 matrix(runif(400), nrow=20, ncol=20, byrow=TRUE)
 ```
-
+Read a .txt file or .csv file into a variable
+```{r}
+Spotify_samplelib<-read.csv("C:/Users/12055/Documents/R/Kaggle data sets/spotify_dataset.csv")
+```
 
 Count the number of sentences in a string variable.
-
 
 Do a logical test to see if one word is found within the text of another string variable.
 
@@ -179,15 +181,15 @@ Put the current computer time in milliseconds into a variable
 Measure how long a piece of code takes to run by measuring the time before the code is run, and after the code is run, and taking the difference to find the total time
 
 
-Read a .txt file or .csv file into a variable
-
-
 Output the contents of a variable to a .txt file
 
 
 Output any matrix to a txt file using commas or tabs to separate column values, and new lines to separate row values
 
 
+Project Euler
+<<If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3,5, 6, and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000.>> 
 
 
 
