@@ -7,9 +7,6 @@ A+B
 A-B
 A*B
 
-args(matrix)
-
-
 m<- matrix(1:9, nrow=3, ncol=3, byrow=TRUE)
 colnames(m)<- c('a', 'b', 'c')
 m

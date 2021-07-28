@@ -117,43 +117,6 @@ my_mean.2<- function(x){
   return(total_sum/length(x))
 }
 my_mean(c(1,2,3))
-
-median.odd<-c()
-median.even<-c()
-my_median<-function(x){
-if (x%%2 !=0){
- median.odd<-x
- Median.odd<-sort(median.odd)
- return(Median.odd)}
- else{
- median.even<-x
- Median.even<-sort(median.even)
- return(Median.even)
- }
-}
-x<-c(1,2,3,4,5)
-my_median(x) 
-
-#if x is not divisible by 2, then store x into this object 
-example.odd<-c(1,2,3,4,5)
-position.odd<-(length(x)/2)
-return[position.odd]
-#if even
-#position.even<-((length(x)/2)+((length(x)/2)+1
-#return([position.even])
-#print(median.position)
-}
-
-example.even<-c(1,2,3,4)
-
-
-my_range<-function(x){
-  v<- c(x)
-v2<-sort(v)
-range<-c(v2[1], v2[length(v2)])
-print(range)}
-
-range(1,20,4,6,8,3)
 ```
 
 
