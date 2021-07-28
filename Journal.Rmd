@@ -118,9 +118,24 @@ my_mean.2<- function(x){
 }
 my_mean(c(1,2,3))
 
-
+median.odd<-c()
+median.even<-c()
 my_median<-function(x){
-  #if odd
+if (x%%2 !=0){
+ median.odd<-x
+ Median.odd<-sort(median.odd)
+ return(Median.odd)}
+ else{
+ median.even<-x
+ Median.even<-sort(median.even)
+ return(Median.even)
+ }
+}
+x<-c(1,2,3,4,5)
+my_median(x) 
+
+#if x is not divisible by 2, then store x into this object 
+example.odd<-c(1,2,3,4,5)
 position.odd<-(length(x)/2)
 return[position.odd]
 #if even
@@ -129,8 +144,8 @@ return[position.odd]
 #print(median.position)
 }
 
-#my_median(c(1,2,3,4,5))
-#my_median(c(1,2,3,4))
+example.even<-c(1,2,3,4)
+
 
 my_range<-function(x){
   v<- c(x)
@@ -172,6 +187,11 @@ Spotify_samplelib<-read.csv("C:/Users/12055/Documents/R/Kaggle data sets/spotify
 ```
 
 Count the number of sentences in a string variable.
+```{r}
+library(quanteda)
+nsentence("Tout peut s'oublier ! Qui s'enfuit deja.")
+```
+
 
 Do a logical test to see if one word is found within the text of another string variable.
 

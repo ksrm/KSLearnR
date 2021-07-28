@@ -642,6 +642,10 @@ sapply(strsplit(x1,&quot; &quot;), length)</code></pre>
 <p>Read a .txt file or .csv file into a variable</p>
 <pre class="r"><code>Spotify_samplelib&lt;-read.csv(&quot;C:/Users/12055/Documents/R/Kaggle data sets/spotify_dataset.csv&quot;)</code></pre>
 <p>Count the number of sentences in a string variable.</p>
+<pre class="r"><code>library(quanteda)
+nsentence(&quot;Tout peut s&#39;oublier ! Qui s&#39;enfuit deja.&quot;)</code></pre>
+<pre><code>## text1 
+##     2</code></pre>
 <p>Do a logical test to see if one word is found within the text of another string variable.</p>
 <p>Put the current computer time in milliseconds into a variable</p>
 <p>Measure how long a piece of code takes to run by measuring the time before the code is run, and after the code is run, and taking the difference to find the total time</p>

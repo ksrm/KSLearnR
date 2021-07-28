@@ -1,5 +1,15 @@
 Using Matrices
 ```{r}
+
+A<-matrix(c(1,2,-1,0), nrow=2, ncol=2, byrow=TRUE)
+B<-matrix(c(3,2,1,-2), nrow=2, ncol=2, byrow=TRUE)
+A+B
+A-B
+A*B
+
+args(matrix)
+
+
 m<- matrix(1:9, nrow=3, ncol=3, byrow=TRUE)
 colnames(m)<- c('a', 'b', 'c')
 m
@@ -24,5 +34,20 @@ m
 z<-c(1,4,5)
 m[,2:3]<-z
 print(m)
+
+m <- matrix(data=cbind(rnorm(30, 0), rnorm(30, 2), rnorm(30, 5)), nrow=30, ncol=3)
+m
+
+m<-matrix(data=cbind(rnorm(16,0), rnorm(16,3), rnorm(16,6)), nrow=16, ncol=3)
+m
+
+
+```
+
+
+
+Use modulo operator to test if the second number is a multiple of the first.
+```{r}
+4%%2
 ```
 
