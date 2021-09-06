@@ -25,21 +25,20 @@ Find the sum of all the integer numbers from 1 to 100.
 
 ```{r}
 sum(1:100)
-
-
-sum<-0
-for (i in 1:100){
-  sum<-sum+i
-}
 ```
 
 
 Write a function to find the sum of all integers between any two values.
 ```{r}
-value.sum<- function(x,y){
-  sum(x:y)
+
+custom.sum<- function(x){
+  counter<-0
+  for(i in x){
+    counter<-counter+i
+  }
+  print(counter)
 }
-value.sum(1,100)
+custom.sum(1:100)
 ```
 
 
@@ -140,9 +139,17 @@ sapply(strsplit(x1," "), length)
 ```
 
 
+Output the contents of a variable to a .txt file
+```{r}
+avocados<-read.csv("Data/avocados kaggle.csv")
+names(avocados)
+txt<-write.csv(avocados$AveragePrice, "averageprice.txt", sep="\t")
+```
+
+
 Create a variable that stores a 20x20 matrix of random numbers
 ```{r}
-matrix(runif(400), nrow=20, ncol=20, byrow=TRUE)
+matrix(runif(400), nrow=20, byrow=TRUE)
 ```
 Read a .txt file or .csv file into a variable
 ```{r}
@@ -157,9 +164,34 @@ nsentence("Tout peut s'oublier ! Qui s'enfuit deja.")
 
 
 Do a logical test to see if one word is found within the text of another string variable.
+```{r}
+x<-c(1:100)
+  for(i in x)
+    {
+    if(i%%3==0)
+       x[i]<-"Fizz"
+    if(i%%5==0)
+        x[i]<-"Buzz"
+     if(i%%5==0 & i%%3==0)
+        x[i]<-"FizzBuzz"
+     "FizzBuzz" <-"Fizz"
+    }
+print(x)
+```
 
 
-Put the current computer time in milliseconds into a variable
+Measure how long a piece of code takes to run by measuring the time before the code is run, and after the code is run, and taking the difference to find the total time
+
+
+Output the contents of a variable to a .txt file
+
+
+Output any matrix to a txt file using commas or tabs to separate column values, and new lines to separate row values
+
+
+Project Euler
+<<If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3,5, 6, and 9. The sum of these multiples is 23.
+Find the sum of all the multiples of 3 or 5 below 1000.>> 
 
 Measure how long a piece of code takes to run by measuring the time before the code is run, and after the code is run, and taking the difference to find the total time
 

@@ -354,15 +354,15 @@ div.tocify {
 <p>Find the sum of all the integer numbers from 1 to 100.</p>
 <pre class="r"><code>sum(1:100)</code></pre>
 <pre><code>## [1] 5050</code></pre>
-<pre class="r"><code>sum&lt;-0
-for (i in 1:100){
-  sum&lt;-sum+i
-}</code></pre>
 <p>Write a function to find the sum of all integers between any two values.</p>
-<pre class="r"><code>value.sum&lt;- function(x,y){
-  sum(x:y)
+<pre class="r"><code>custom.sum&lt;- function(x){
+  counter&lt;-0
+  for(i in x){
+    counter&lt;-counter+i
+  }
+  print(counter)
 }
-value.sum(1,100)</code></pre>
+custom.sum(1:100)</code></pre>
 <pre><code>## [1] 5050</code></pre>
 <p>List all of the odd numbers from 1 to 100.</p>
 <pre class="r"><code>seq(1,100,2)</code></pre>
@@ -532,8 +532,15 @@ nchar(celebrity01)</code></pre>
 <pre class="r"><code>x1&lt;-c(&quot;Down by the corner&quot;)
 sapply(strsplit(x1,&quot; &quot;), length)</code></pre>
 <pre><code>## [1] 4</code></pre>
+<p>Output the contents of a variable to a .txt file</p>
+<pre class="r"><code>avocados&lt;-read.csv(&quot;Data/avocados kaggle.csv&quot;)
+names(avocados)</code></pre>
+<pre><code>##  [1] &quot;X&quot;            &quot;Date&quot;         &quot;AveragePrice&quot; &quot;Total.Volume&quot; &quot;X4046&quot;       
+##  [6] &quot;X4225&quot;        &quot;X4770&quot;        &quot;Total.Bags&quot;   &quot;Small.Bags&quot;   &quot;Large.Bags&quot;  
+## [11] &quot;XLarge.Bags&quot;  &quot;type&quot;         &quot;year&quot;         &quot;region&quot;</code></pre>
+<pre class="r"><code>txt&lt;-write.csv(avocados$AveragePrice, &quot;averageprice.txt&quot;, sep=&quot;\t&quot;)</code></pre>
 <p>Create a variable that stores a 20x20 matrix of random numbers</p>
-<pre class="r"><code>matrix(runif(400), nrow=20, ncol=20, byrow=TRUE)</code></pre>
+<pre class="r"><code>matrix(runif(400), nrow=20, byrow=TRUE)</code></pre>
 <pre><code>##            [,1]       [,2]        [,3]       [,4]       [,5]      [,6]
 ##  [1,] 0.5782921 0.36940917 0.881339562 0.59925282 0.24175928 0.9910641
 ##  [2,] 0.1601894 0.56665886 0.182444451 0.86785625 0.09371328 0.6382238
@@ -626,7 +633,39 @@ nsentence(&quot;Tout peut s&#39;oublier ! Qui s&#39;enfuit deja.&quot;)</code></
 <pre><code>## text1 
 ##     2</code></pre>
 <p>Do a logical test to see if one word is found within the text of another string variable.</p>
-<p>Put the current computer time in milliseconds into a variable</p>
+<pre class="r"><code>x&lt;-c(1:100)
+  for(i in x)
+    {
+    if(i%%3==0)
+       x[i]&lt;-&quot;Fizz&quot;
+    if(i%%5==0)
+        x[i]&lt;-&quot;Buzz&quot;
+     if(i%%5==0 &amp; i%%3==0)
+        x[i]&lt;-&quot;FizzBuzz&quot;
+     &quot;FizzBuzz&quot; &lt;-&quot;Fizz&quot;
+    }
+print(x)</code></pre>
+<pre><code>##   [1] &quot;1&quot;        &quot;2&quot;        &quot;Fizz&quot;     &quot;4&quot;        &quot;Buzz&quot;     &quot;Fizz&quot;    
+##   [7] &quot;7&quot;        &quot;8&quot;        &quot;Fizz&quot;     &quot;Buzz&quot;     &quot;11&quot;       &quot;Fizz&quot;    
+##  [13] &quot;13&quot;       &quot;14&quot;       &quot;FizzBuzz&quot; &quot;16&quot;       &quot;17&quot;       &quot;Fizz&quot;    
+##  [19] &quot;19&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;     &quot;22&quot;       &quot;23&quot;       &quot;Fizz&quot;    
+##  [25] &quot;Buzz&quot;     &quot;26&quot;       &quot;Fizz&quot;     &quot;28&quot;       &quot;29&quot;       &quot;FizzBuzz&quot;
+##  [31] &quot;31&quot;       &quot;32&quot;       &quot;Fizz&quot;     &quot;34&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;    
+##  [37] &quot;37&quot;       &quot;38&quot;       &quot;Fizz&quot;     &quot;Buzz&quot;     &quot;41&quot;       &quot;Fizz&quot;    
+##  [43] &quot;43&quot;       &quot;44&quot;       &quot;FizzBuzz&quot; &quot;46&quot;       &quot;47&quot;       &quot;Fizz&quot;    
+##  [49] &quot;49&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;     &quot;52&quot;       &quot;53&quot;       &quot;Fizz&quot;    
+##  [55] &quot;Buzz&quot;     &quot;56&quot;       &quot;Fizz&quot;     &quot;58&quot;       &quot;59&quot;       &quot;FizzBuzz&quot;
+##  [61] &quot;61&quot;       &quot;62&quot;       &quot;Fizz&quot;     &quot;64&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;    
+##  [67] &quot;67&quot;       &quot;68&quot;       &quot;Fizz&quot;     &quot;Buzz&quot;     &quot;71&quot;       &quot;Fizz&quot;    
+##  [73] &quot;73&quot;       &quot;74&quot;       &quot;FizzBuzz&quot; &quot;76&quot;       &quot;77&quot;       &quot;Fizz&quot;    
+##  [79] &quot;79&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;     &quot;82&quot;       &quot;83&quot;       &quot;Fizz&quot;    
+##  [85] &quot;Buzz&quot;     &quot;86&quot;       &quot;Fizz&quot;     &quot;88&quot;       &quot;89&quot;       &quot;FizzBuzz&quot;
+##  [91] &quot;91&quot;       &quot;92&quot;       &quot;Fizz&quot;     &quot;94&quot;       &quot;Buzz&quot;     &quot;Fizz&quot;    
+##  [97] &quot;97&quot;       &quot;98&quot;       &quot;Fizz&quot;     &quot;Buzz&quot;</code></pre>
+<p>Measure how long a piece of code takes to run by measuring the time before the code is run, and after the code is run, and taking the difference to find the total time</p>
+<p>Output the contents of a variable to a .txt file</p>
+<p>Output any matrix to a txt file using commas or tabs to separate column values, and new lines to separate row values</p>
+<p>Project Euler &lt;&lt;If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3,5, 6, and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.&gt;&gt;</p>
 <p>Measure how long a piece of code takes to run by measuring the time before the code is run, and after the code is run, and taking the difference to find the total time</p>
 <p>Output the contents of a variable to a .txt file</p>
 <p>Output any matrix to a txt file using commas or tabs to separate column values, and new lines to separate row values</p>
