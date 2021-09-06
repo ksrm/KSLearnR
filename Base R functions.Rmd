@@ -1,3 +1,14 @@
+Custom functions
+```{r}
+dice<-function(){
+  die<-1:6 #local variable
+roll<-sample(die, 2, replace=TRUE)
+sum(roll)}
+
+dice()
+```
+
+
 Using Matrices
 ```{r}
 
@@ -41,10 +52,16 @@ m
 
 ```
 
-
-
 Use modulo operator to test if the second number is a multiple of the first.
 ```{r}
 4%%2
 ```
 
+
+Rep() and Replicate()
+```{r}
+rep(16,3)
+#basic repetition within a vector
+
+replicate
+```
